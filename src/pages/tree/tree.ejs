@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Chatbot</title>
+	</head>
+	<body class="tree">
+		<% include ../../components/aside/aside %> 
+		<% include ../../components/notification/notification %> 
+		<% include ../../components/tree/tree %> 
+		<section class="modal hide" modal>
+			<button modal-edit>wijzig</button>
+			<button modal-add>voeg kind toe</button>
+			<button modal-rotate>roteren</button>
+			<button modal-delete>delete</button>
+		</section>
+		<button save-tree>Opslaan</button>
+		<% include ../../components/scripts/firebase-scripts %> 
+	</body>
+</html>

@@ -1,0 +1,263 @@
+/* #active {
+    background-color: red;
+} */
+.train {
+    background-color: #faf9fc;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.wrapper {
+    background-color: #faf9fc;
+    width: calc(100% - 19rem);
+    position: absolute;
+    right: 1rem;
+}
+
+.train .form {
+    margin: 1rem 0;
+    margin-top: 0;
+}
+
+.train .form fieldset {
+    padding: 0;
+    padding: 1rem;
+    border: 0;
+    border-radius: .5rem;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+
+.train .form fieldset legend{
+    padding-top: 3rem;
+}
+
+.closed-status {
+    display: none;
+}
+
+.train  details[open].stage > summary {
+    /* margin: 1rem 0; */
+}
+
+
+.train  details[open].stage > summary::-webkit-details-marker {
+    display: none;
+}
+
+.train details.stage {
+    margin-bottom: 2rem;
+}
+
+.train details.stage[stage-1] {
+    /* background-color: red; */
+    padding: 1rem;
+    background-color: #efedf2;
+    border-radius: .5rem;
+}
+
+.train details:not([open]).stage {
+    background-color: #efedf2;
+    border-radius: .5rem;
+}
+
+.train .tree-selector{
+    border-radius: .5rem;
+    height: 2rem;
+    min-height: 2rem;
+    border: 1px solid #abafb7;
+    padding-left: .5rem;
+    margin: .5rem 0 .5rem;
+    color: #2d2c2d;
+    resize: vertical;
+    width: 100%;
+}
+
+.quickAnswer-wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.quickAnswer-wrapper button {
+    height: 2.1rem;
+}
+
+.quickAnswer-input {
+    border-radius: .5rem;
+    min-height: 2rem;
+    border: 1px solid #abafb7;
+    padding-left: .5rem;
+    margin: .5rem 0 0;
+    color: #2d2c2d;
+    resize: vertical;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .5rem;
+    height: 2.1rem;
+}
+
+.train .add {
+    background-color: #467fee;
+    border: 0;
+    color: #fff;
+    margin-top: .5rem;
+    border-radius: .5rem;
+    height: 2rem;
+    transition: all .1s ease-in-out;
+    padding: 0 .5rem;
+}
+
+.previousUtterances {
+    margin-bottom: 2rem;
+}
+
+.previousUtterances summary {
+    margin-bottom: 1rem;
+}
+
+#chatbotReactionTrainingForm .form-field {
+    margin-top: 1rem;
+}
+
+.train .externalLinkWrapper.hide {
+    display: none;
+}
+
+.train .externalLinkWrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+
+.train .externalLinkWrapper label {
+        width: 100%;
+}
+
+.train .externalLinkWrapper button {
+    border: 0;
+    border-radius: 0 .5rem .5rem 0;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: grey;
+}
+
+.train .externalLinkWrapper .label {
+    transform: scale(.75) translate3d(-16%,-120%,0);
+    position: absolute;
+}
+
+.train .allExternalLinks-label {
+    margin: 1.5rem 0;
+}
+
+.train .quickAnswer-wrapper button, .train .externalLinkWrapper button {
+    border: 0;
+    border-radius: 0 .5rem .5rem 0;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: grey;
+    gap: .5rem;
+}
+
+.train .quickAnswer-wrapper button svg, .train .externalLinkWrapper button svg {
+    fill: grey;
+    width: 1rem;
+}
+
+.train .externalLinkWrapper input {
+    width: 100%;
+    border-radius: .5rem;
+    min-height: 2rem;
+    border: 1px solid #abafb7;
+    margin: .5rem 0 0;
+    color: #2d2c2d;
+    resize: vertical;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .5rem;
+    height: 2.1rem;
+}
+
+.train .submit-all-data {
+    width: 100%;
+    background-color: #467fee;
+    border: 0;
+    color: #fff;
+    margin-top: .5rem;
+    border-radius: .5rem;
+    height: 2rem;
+    transition: all .1s ease-in-out;
+    padding: 0 .5rem;
+}
+
+.train .submit-all-data:disabled {
+    background-color: grey;
+}
+
+.train .submit-all-data svg {
+    width: 1rem;
+    fill: white;
+}
+
+.train .submit-all-data .before {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    transition: .1s ease-in-out;
+    height: 2rem;
+    transform: rotate3d(1, 0, 0, 0deg);
+}
+
+.train .submit-all-data .after {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    transform: rotate3d(1, 0, 0, 90deg);
+    margin-top: -2rem;
+}
+
+.train .submit-all-data .before.animate {
+    animation: animateOut 4s ease-in-out;
+}
+
+.train .submit-all-data .after.animate {
+    animation: animateIn 4s ease-in-out;
+
+}
+
+@keyframes animateOut {
+    0%   {transform: rotate3d(1, 0, 0, 0deg);}
+    10%  {transform: rotate3d(1, 0, 0, 90deg);}
+    90%  {transform: rotate3d(1, 0, 0, 90deg);}
+    100%   {transform: rotate3d(1, 0, 0, 0deg);}
+  }
+
+  @keyframes animateIn {
+    0%   {transform: rotate3d(1, 0, 0, -90deg);}
+    10%   {transform: rotate3d(1, 0, 0, -90deg);}
+    20%  {transform: rotate3d(1, 0, 0, 0deg);}
+    80%  {transform: rotate3d(1, 0, 0, 0deg);}
+    90%   {transform: rotate3d(1, 0, 0, -90deg);}
+    100%   {transform: rotate3d(1, 0, 0, -90deg);}
+  }
+
+
+/* .train .submit-all-data .before.animate-out {
+    transform: rotate3d(1, 0, 0, 90deg);
+}
+
+.train .submit-all-data .after.animate-in {
+    transform: rotate3d(1, 0, 0, 0deg);
+} */
+
+
+
+

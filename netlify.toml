@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  functions = "./functions"
+  publish = "dist"
+
+[[redirects]]
+  from = "/"
+  to = "/login"
+  status = 200
+  force = true

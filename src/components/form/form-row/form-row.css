@@ -1,0 +1,95 @@
+.form-row {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* margin: 1rem 0; */
+    align-items: flex-end;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.form-row .label {
+    transform: scale(0.75) translate3d(-16%, -120%, 0);
+}
+.form-row .label {
+    position: absolute;
+}
+.form-row .form-field {
+    /* width: 100%; */
+    
+}
+
+.form-field {
+    /* margin-top: 1rem; */
+}
+.form-row + .form-row .label {
+    position: absolute;
+    visibility: hidden;
+}
+
+.form-row .form-field label {
+    width: 100%;
+    display: flex;
+}
+
+.fomr-row .form-textarea .utterance {
+    resize: vertical;
+}
+.form-row .error {
+    border: 1px solid red;
+}
+
+.form-row .form-field input, .form-row .form-field textarea, .form-row .form-field select {
+	border-radius: .5rem;
+	height: 2rem;
+    min-height: 2rem;
+	border: 1px solid;
+	border-color: #abafb7;
+	padding-left: .5rem;
+	margin: .5rem 0 0rem;
+    color: #2d2c2d;
+    resize: vertical;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-row .form-field textarea {
+    padding: .5rem;
+    height: 2.1rem;
+}
+
+.form-row .form-field button {
+    width: 100%;
+    border: 0;
+    border-radius: 0 .5rem .5rem 0;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: grey;
+    gap: .5rem;
+}
+
+.form-row .form-field button svg {
+    width: 1rem;
+    fill: grey;
+}
+
+/* .form-row .form-field button  > * {
+    margin: 0 .5rem
+} */
+
+
+.form-row .form-field input::placeholder, .form-row .form-field textarea::placeholder, .form-field select::placeholder {
+	font-weight: lighter;
+	color: #d8d8d9;
+}
+
+.form-row .form-field input:focus, .form-row .form-field textarea:focus, .form-field select:focus {
+	border-color: #467fee;
+	outline: 0;
+}

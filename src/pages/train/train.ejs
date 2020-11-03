@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<% include ../../components/fonts/fonts %>
+
+		<title>Train</title>
+	</head>
+	<body class="train">
+		<% include ../../components/aside/aside %> 
+		
+		<div class="wrapper">
+			<h2>Trainen</h2>
+			<% include ../../components/notification/notification %> 
+			<div stage-indicator>
+				<span></span>
+				<span></span>
+			</div>
+			<!-- <div stage-1> -->
+				<details class="stage" stage-1 open>
+					<summary>Kies een onderwerp uit de Conversional tree om te trainen.</summary>
+					<select name="" id="" class="tree-selector" train-tree-option>
+						<option hidden disabled selected value> -- Maak een keus -- </option>
+					</select>	
+				</details>
+				
+				<!-- </div> -->
+			<details stage-2 class="stage closed-status">
+				<summary>Formuleer zinnen voor het gekozen onderwerp om de chatbot te verbeteren.<br> Wijzig eerder ingevoerde trainignsdata of pas het antwoord van de AI chatbot aan op het onderwerp.</summary>
+				<form id="userInputTrainingForm" action="" class="form">
+					<fieldset>
+						<legend>Gebruikers input</legend>
+						<details previous-utterances class="previousUtterances">
+							<summary>Eerdere resultaten</summary>
+							
+						</details>
+						<% include ../../components/form/form-row/form-row %> 
+						<% include ../../components/form/form-footer/form-footer %> 
+					</fieldset>
+				</form>
+				<form id="chatbotReactionTrainingForm" action="" class="form">
+					<fieldset>
+						<legend>Chatbot reactie</legend>
+						<% include ../../components/form/form-row/form-row %> 
+						<div class="form-field">
+							<label class="quickAnswer">
+								<div class="label">Snelle antwoorden</div>
+								<div id="allQuickAnswers">
+									<div id="quickAnswer" class="hide quickAnswer-wrapper">
+										<input type="text" placeholder="referenende naam" class="quickAnswer-input"/>
+										<button type="button" aria-label="Delete" title="Delete">
+											<svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											viewBox="0 0 448 448" style="enable-background:new 0 0 448 448;" xml:space="preserve">
+												<path class="st0" d="M224,0C100.5,0,0,100.5,0,224s100.5,224,224,224s224-100.5,224-224S347.5,0,224,0z M306.5,280.1
+												c7.3,7.3,7.3,19.1,0,26.4c-3.6,3.6-8.4,5.5-13.2,5.5s-9.6-1.8-13.2-5.5L224,250.4l-56.1,56.1c-3.6,3.6-8.4,5.5-13.2,5.5
+												c-4.8,0-9.6-1.8-13.2-5.5c-7.3-7.3-7.3-19.1,0-26.4l56.1-56.1l-56.1-56.1c-7.3-7.3-7.3-19.1,0-26.4c7.3-7.3,19.1-7.3,26.4,0
+												l56.1,56.1l56.1-56.1c7.3-7.3,19.1-7.3,26.4,0s7.3,19.1,0,26.4L250.4,224L306.5,280.1z"/>
+											</svg>
+											Wis
+										</button>
+									</div>
+								</div>
+							</label>
+						</div>
+						<button add-quick-answer-field class="add">Voeg veld toe</button>
+						<div class="form-field">
+							<p class="allExternalLinks-label">Externe links</p>
+							<div id="allExternalLinks">
+								<div id="externalLink" class="externalLinkWrapper hide">
+									<label  name-of-external-link>
+										<div class="label">Naam van verwijzing</div>
+										<input type="text" placeholder="verwijzing"/>
+									</label>
+									<label url-of-external-link>
+										<div class="label">URL van verwijzing</div>
+										<input type="url" placeholder="https://www.loavies.nl/verwijzing"/>
+									</label>
+									<button type="button" aria-label="Delete" title="Delete">
+										<svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										viewBox="0 0 448 448" style="enable-background:new 0 0 448 448;" xml:space="preserve">
+											<path class="st0" d="M224,0C100.5,0,0,100.5,0,224s100.5,224,224,224s224-100.5,224-224S347.5,0,224,0z M306.5,280.1
+											c7.3,7.3,7.3,19.1,0,26.4c-3.6,3.6-8.4,5.5-13.2,5.5s-9.6-1.8-13.2-5.5L224,250.4l-56.1,56.1c-3.6,3.6-8.4,5.5-13.2,5.5
+											c-4.8,0-9.6-1.8-13.2-5.5c-7.3-7.3-7.3-19.1,0-26.4l56.1-56.1l-56.1-56.1c-7.3-7.3-7.3-19.1,0-26.4c7.3-7.3,19.1-7.3,26.4,0
+											l56.1,56.1l56.1-56.1c7.3-7.3,19.1-7.3,26.4,0s7.3,19.1,0,26.4L250.4,224L306.5,280.1z"/>
+										</svg>
+										Wis
+									</button>
+								</div>
+							</div>
+						</div>
+						<button add-external-link-field class="add">Voeg veld toe</button>
+					</fieldset>
+				</form>	
+				<button type="button" data-execute-training class="submit-all-data">
+					<div class="before">Training uitvoeren</div>
+					<div class="after">
+						<svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								viewBox="0 0 448 448" style="enable-background:new 0 0 448 448;" xml:space="preserve">
+							<g>
+								<g>
+									<path class="st0" d="M167.1,279.6c-2.3-2.7-3.4-4.1-4.7-5.4c-28.6-28.6-57.2-57.1-85.8-85.7c-17.4-17.3-45.6-17.5-62.9-0.3
+										c-18,18-18.2,45.6-0.3,63.4c40.6,40.5,81.2,81.1,121.9,121.6c17.7,17.6,45.6,17.6,63.2,0c77.6-77.4,155.3-154.8,232.9-232.2
+										c1.9-1.9,3.8-3.7,5.5-5.8c10.6-13,14-27.6,8.4-43.4c-5.8-16.4-17.7-26.8-35.1-29.8c-16-2.8-29.3,2.8-40.7,14.1
+										c-66,65.9-132.2,131.8-198.2,197.7C169.9,275.3,168.9,277.1,167.1,279.6z"/>
+									<path class="st0" d="M167.1,279.6c1.8-2.5,2.8-4.3,4.2-5.7C237.4,208,303.5,142.2,369.6,76.2c11.4-11.3,24.6-16.9,40.7-14.1
+										c17.4,3,29.3,13.4,35.1,29.8c5.6,15.8,2.1,30.5-8.4,43.4c-1.7,2.1-3.6,3.9-5.5,5.8c-77.6,77.4-155.3,154.8-232.9,232.2
+										c-17.7,17.6-45.6,17.6-63.2,0C94.6,332.8,54,292.2,13.4,251.7c-17.9-17.9-17.8-45.4,0.3-63.4c17.2-17.2,45.5-17.1,62.9,0.3
+										c28.6,28.6,57.2,57.1,85.8,85.7C163.7,275.5,164.8,277,167.1,279.6z"/>
+								</g>
+							</g>
+						</svg>
+						Data opgeslagen</div>
+				</button>
+			</details>
+		</div>
+		<% include ../../components/scripts/firebase-scripts %> 
+	</body>
+</html>
