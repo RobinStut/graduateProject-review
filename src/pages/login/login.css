@@ -1,0 +1,91 @@
+.login {
+	background-color: #fafafc;
+	height: 100vh;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	/* background: #ae91f8;
+	background: linear-gradient(180deg,#ae91f8,#467fee); */
+	position: relative;
+}
+
+.login .styleItem {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	border-radius: 2rem 0 0 2rem;
+	background: #ae91f8;
+	background: linear-gradient(180deg,#ae91f8,#467fee);
+}
+
+.login .login-form {
+	box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding: 1rem;
+    border-radius: .5rem;
+	background-color: white;
+    display: flex;
+	flex-flow: column;
+	min-width: 50%;
+}
+
+.hide {
+	display: none;
+}
+
+.login .login-form label {
+	display: flex;
+	flex-flow: column;
+	font-size: 14px;
+	color: #2d2c2d;
+}
+
+.login .login-form input {
+	border-radius: .5rem;
+	height: 2rem;
+	border: 1px solid;
+	border-color: #abafb7;
+	padding-left: .5rem;
+	margin: .5rem 0 1.5rem;
+	color: #2d2c2d;
+}
+
+.login .login-form input::placeholder {
+	font-weight: lighter;
+	color: #d8d8d9;
+}
+
+.login .login-form input:focus {
+	border-color: #467fee;
+	outline: 0;
+}
+
+.login .login-form .login-form-buttons {
+    display: flex;
+    flex-flow: column;
+}
+
+.login .login-form .login-form-buttons button{
+	background-color: #467fee;
+    border: 0;
+    color: white;
+	width: 100%;
+	margin-top: .5rem;
+	border-radius: .5rem;
+	height: 2rem;
+	transition: all .1s ease-in-out;
+}
+
+.login .login-form .login-form-buttons button:hover{
+	transform: scale(1, 1.1);
+	border-radius: .55rem;
+}
+
+.login .login-form .login-form-buttons .login-form-create-button {
+	background-color: #efedf1;
+	color: #2d2c2d;
+}
+

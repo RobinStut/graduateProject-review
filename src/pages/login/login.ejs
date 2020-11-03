@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
+		<title>Login</title>
+	</head>
+	<body class="login">
+		<div class="styleItem"></div>
+		<form action="" login-form class="login-form">
+			<% include ../../components/notification/notification %>  
+			<label>
+				Email
+				<input type="email" email-input placeholder="Typ hier je email adres"/>
+			</label>
+			<label>
+				Wachtwoord
+				<input type="password" password-input placeholder="Typ hier je wachtwoord"/>
+			</label>
+			<div class="login-form-buttons">
+				<button login-button>Login</button>
+				<button class="hide" register-button>Registreer account</button>
+				<button type="submit" signUp-button class="login-form-create-button">Maak account</button>
+			</div>
+		</form>
+
+		<% include ../../components/scripts/firebase-scripts %> 
+	</body>
+</html>
